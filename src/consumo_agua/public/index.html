@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Gideias Alves">
+  <title>Cadastro de Consumo de Água</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Consumo de Água</h1>
+
+    <form id="form-cadastro">
+      <h2>Registrar Consumo</h2>
+      <label for="usuarioId">Código do Usuário:</label>
+      <input type="text" id="usuarioId" name="usuarioId" required>
+      
+      <label for="quantidade">Quantidade Consumida:</label>
+      <input type="number" id="quantidade" name="quantidade" required>
+      
+      <label for="data">Data:</label>
+      <input type="date" id="data" name="data" required>
+      
+      <button type="submit">Registrar Consumo</button>
+    </form>
+    <p id="mensagem"></p>
+  </div>
+
+  <div class="container">
+    <h2>Consultar Histórico de Consumo</h2>
+    <form id="form-historico">
+      <label for="usuarioIdHistorico">Código do Usuário:</label>
+      <input type="text" id="usuarioIdHistorico" name="usuarioIdHistorico" required>
+      
+      <label for="dataInicio">Data Início:</label>
+      <input type="date" id="dataInicio" name="dataInicio" required>
+      
+      <label for="dataFim">Data Fim:</label>
+      <input type="date" id="dataFim" name="dataFim" required>
+      
+      <button type="submit">Consultar Histórico</button>
+    </form>
+    <ul id="historico"></ul>
+  </div>
+
+  <div class="container">
+    <h2>Gerar Alerta de Consumo Elevado</h2>
+    <form id="form-alerta">
+      <label for="usuarioIdAlerta">Código do Usuário:</label>
+      <input type="text" id="usuarioIdAlerta" name="usuarioIdAlerta" required>
+      
+      <button type="submit">Verificar Alerta</button>
+    </form>
+    <p id="alerta-mensagem"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
